@@ -11,14 +11,14 @@ public class PlaygroundTest {
 
     @Before
     public void before(){
-        playground = new Playground();
+        playground = new Playground("Spanky's drop-off");
         oldVisitor = new Visitor(35, 1.78, 300);
         youngVisitor = new Visitor(8, 1.20, 5);
     }
 
     @Test
     public void hasName() {
-        assertEquals("Playground", playground.getName());
+        assertEquals("Spanky's drop-off", playground.getName());
     }
 
     @Test

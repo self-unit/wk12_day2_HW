@@ -9,11 +9,11 @@ public class ParkTest {
 
     @Before
     public void before(){
-        park = new Park();
+        park = new Park("Dude Chilling Park");
     }
 
     @Test
     public void hasName() {
-        assertEquals("Park", park.getName());
+        assertEquals("Dude Chilling Park", park.getName());
     }
 }

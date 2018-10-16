@@ -10,13 +10,13 @@ public class DodgemsTest {
 
     @Before
     public void before(){
-        dodgems = new Dodgems();
+        dodgems = new Dodgems("Hanks Bad knee");
         youngVisitor = new Visitor(10, 1.34, 23);
     }
 
     @Test
     public void hasName() {
-        assertEquals("Dodgems", dodgems.getName());
+        assertEquals("Hanks Bad knee", dodgems.getName());
     }
 
     @Test

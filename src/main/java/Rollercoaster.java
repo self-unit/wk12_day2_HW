@@ -1,9 +1,23 @@
-public class Rollercoaster extends Attraction implements ISecurity, ITicketed {
+public class Rollercoaster extends Attraction implements ISecurity, ITicketed, IReviewed {
 
-    public Rollercoaster(){
-        super("Rollercoaster");
+    private int rating;
+
+    public Rollercoaster(String name){
+        super(name);
+        this.rating = 4;
     }
 
+    @Override
+    public int getRating() {
+        return rating;
+    }
+
+    @Override
+    public String getReviewName(){
+        return String.format("%s", getClass().getName());
+    }
+
+    @Override
     public boolean isAllowedTo(Visitor visitor) {
         if (visitor.getHeight() >= 1.45) {
             return true;
@@ -12,10 +26,12 @@ public class Rollercoaster extends Attraction implements ISecurity, ITicketed {
         }
     }
 
+    @Override
     public double defaultPrice() {
         return 8.40;
     }
 
+    @Override
     public double priceFor(Visitor visitor) {
         if (visitor.getHeight() > 2.00) {
             return (defaultPrice() * 2);
