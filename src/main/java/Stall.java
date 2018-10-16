@@ -1,8 +1,14 @@
 public abstract class Stall {
 
-    private String name;
-    private String ownerName;
-    private String parkingSpot;
+    protected String name;
+    protected String ownerName;
+    protected String parkingSpot;
+
+    public Stall(String name, String ownerName, String parkingSpot) {
+        this.name = name;
+        this.ownerName = ownerName;
+        this.parkingSpot = parkingSpot;
+    }
 
     public String getName() {
         return name;
