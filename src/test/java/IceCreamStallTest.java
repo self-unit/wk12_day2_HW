@@ -1,0 +1,2 @@
+public class IceCreamStallTest {
+}
