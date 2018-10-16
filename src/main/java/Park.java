@@ -1,2 +1,6 @@
-public class Park {
+public class Park extends Attraction{
+
+    public Park(){
+        super("Park");
+    }
 }
